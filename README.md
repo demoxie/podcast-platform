@@ -312,49 +312,49 @@ A RESTful Laravel API backend for managing a podcast platform — supports categ
 
 ## ⚙️ Local Setup (Dockerized)
 
-### 📦 Requirements
+## 📦 Requirements
 
 - Docker + Docker Compose
 
-### 📥 Clone the Repo
+## 📥 Clone the Repo
 
 ```bash
 git clone https://github.com/your-username/podcast-platform-api.git
 cd podcast-platform-api
 cp .env.example .env
-### 🐳 Start the Services
+## 🐳 Start the Services
 ```bash 
 docker-compose up -d --build
 
-### 📦 Install Composer Dependencies
+## 📦 Install Composer Dependencies
 ```bash
 docker exec -it laravel-app composer install
 
-### 🔑 Generate Application Key
+## 🔑 Generate Application Key
 ```bash
 docker exec -it laravel-app php artisan key:generate
- ### 🗃️ Database Migration & Seeding
+ ## 🗃️ Database Migration & Seeding
 ```bash
 docker exec -it laravel-app php artisan migrate --seed
 
-### 🔍 API Documentation (Swagger)
+## 🔍 API Documentation (Swagger)
 Once containers are running:
 
-### 📄 Swagger UI available at:
+## 📄 Swagger UI available at:
 ```bash
 http://localhost:8000/api/documentation
 
-### To manually regenerate docs:
+## To manually regenerate docs:
 ```bash
 docker exec -it laravel-app php artisan l5-swagger:generate
-### 🔗 API Routes Summary
+## 🔗 API Routes Summary
 
 Method	Endpoint	Description
 GET	/api/v1/categories	List all categories
 GET	/api/v1/podcasts	List podcasts (paginated)
 GET	/api/v1/podcasts/{id}	Get podcast + episodes
 GET	/api/v1/episodes/{id}	Get episode details
-### 🧪 Running Tests
+## 🧪 Running Tests
 ```bash
 docker exec -it laravel-app php artisan test
 
